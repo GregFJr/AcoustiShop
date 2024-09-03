@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --Burnt-Orange: #D87D4A;
+  --Light-Orange: #FBAF85;
+  --Semi-Black: #101010;
+  --Just-Black: #000000;
+  --Off-White: #FAFAFA;
+  --Greyish: #F1F1F1;
+  --Just-White: #FFFFFF;
+}
+
+body {
+  background-color: var();
+}
+
+/*-----------------Navigation--------------------*/
+.navigation {
+display: flex;
+font-size: 18px;
+font-weight: lighter;
+justify-content: center;
+justify-content: space-evenly;
+align-items: center;
+background-color: var(--Just-Black);
+color: var(--Just-White);
+padding-top: 15px;
+}
+
+.navigation .nav-links {
+  display: flex;
+  letter-spacing: 2px;
+  gap: 100px;
+}
+
+/*----------------Heaphones Page-----------------*/
+
+.headphones-hero {
+  background-color: black;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFF;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 5%;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-descript {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  inline-size: 500px;
+}
+
+.product-descript h1 {
+  font-size: 56px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 56px;
+}
+
+.products h6 {
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: var(--Light-Orange);
+}
+
+.product-descript button {
+  background-color: var(--Burnt-Orange);
+  color: var(--Just-White);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  padding: 2%;
+}
+
+.product-descript p {
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 500;
+}
+
+.p1 img {
+  width: 450px;
+  height: auto;
+}
+
+.p1 {
+  display: flex;
+  flex-direction: row-reverse;
+
+}
+
+.p2 img {
+  width: 450px;
+  height: auto;
+}
+
+.p2 {
+  display: flex;
+
+}
+
+.p3 {
+  display: flex;
+  flex-direction: row-reverse;
+
+}
+.p3 img {
+  width: 450px;
+  height: auto;
+}
+
+.p1, .p2, .p3 {
+  margin-bottom: 8%;
+  gap: 100px;
+}
+
+
+
+
