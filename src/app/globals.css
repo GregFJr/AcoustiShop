@@ -10,10 +10,16 @@
   --Off-White: #FAFAFA;
   --Greyish: #F1F1F1;
   --Just-White: #FFFFFF;
+
+  --Text-Grey: hsl(0, 0%, 70%);
 }
 
 body {
   background-color: var();
+}
+
+body p {
+  color: var(--Text-Grey)
 }
 
 /*-----------------Navigation--------------------*/
@@ -134,7 +140,7 @@ padding-top: 15px;
 .audio-categories {
   display: flex;
   gap: 10%;
-  margin: 5% 0 5% 0;
+  margin: 10% 0 15% 0;
   text-transform: uppercase;
 }
 
@@ -142,7 +148,7 @@ padding-top: 15px;
   width: 200px;
   height: auto;
   position: relative;
-  bottom: 35%;
+  bottom: 34%;
 }
 
 .audio-categories div {
@@ -176,3 +182,82 @@ img[alt='right arrow'] {
   left: 40px;
 }
 
+.headphone-page-script {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10%;
+  gap: 10%;
+}
+
+.headphone-page-script img {
+  width: 450px;
+  height: auto;
+  margin-right: 5%;
+}
+
+.audio-script {
+  inline-size: 700px;
+}
+
+.audio-script h1 {
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 56px;
+  margin-bottom: 8%;
+}
+
+.audio-script p {
+  line-height: 25px;
+  font-size: 15px;
+  font-weight: 500;
+  color: hsl(0, 0%, 70%);
+}
+
+.audio-script h1 span{
+  color: var(--Burnt-Orange);
+}
+
+/*----------------Footer-----------------*/
+
+
+.footer {
+  display: flex;
+  gap: 25%;
+  justify-content: center;
+  justify-content: space-evenly;
+  background-color: var(--Just-Black);
+  padding: 4% 0 5% 0;
+}
+
+.footer .brand {
+  inline-size: 550px;
+  font-size: 15px;
+}
+
+.brand :nth-child(even) {
+  margin: 5% 0 5% 0;
+}
+
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  color: var(--Just-White);
+  text-transform: uppercase;
+}
+
+.footer-links {
+  display: flex;
+  margin-top: 5%;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
