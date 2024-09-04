@@ -32,7 +32,7 @@ padding-top: 15px;
 .navigation .nav-links {
   display: flex;
   letter-spacing: 2px;
-  gap: 100px;
+  gap: 80px;
 }
 
 /*----------------Heaphones Page-----------------*/
@@ -131,6 +131,48 @@ padding-top: 15px;
   gap: 100px;
 }
 
+.audio-categories {
+  display: flex;
+  gap: 10%;
+  margin: 5% 0 5% 0;
+  text-transform: uppercase;
+}
 
+.audio-categories img {
+  width: 200px;
+  height: auto;
+  position: relative;
+  bottom: 35%;
+}
 
+.audio-categories div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Greyish);
+  position: relative;
+  height: auto;
+  width: 350px;
+}
+
+.audio-categories  h5 {
+  position: relative;
+  bottom: 35%;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.audio-categories a {
+  position: relative;
+  bottom: 20%;
+  letter-spacing: 1px;
+}
+
+img[alt='right arrow'] {
+  position: relative;
+  width: 10px;
+  left: 40px;
+}
 
