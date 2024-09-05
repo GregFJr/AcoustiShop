@@ -1,6 +1,7 @@
 "use client";
 
 import useSWR from 'swr';
+import Link from 'next/link';
 
 // Define TypeScript interfaces for your product data
 interface ImageSet {
@@ -80,7 +81,9 @@ export default function Headphones() {
             <h6>{product4.new ? 'New Product': ''}</h6>
             <h1>{product4.name}</h1>
             <p>{product4.description}</p>
+            <Link href={`/post/${product4.id}`}>
             <button>see product</button>
+            </Link>
             </div>
             <img src={product4.image.desktop} alt={product4.name} />
           </div>
@@ -129,7 +132,7 @@ export default function Headphones() {
         <div className='headphone-page-script'>
           <div className='audio-script'>
            <h1>Bringing you the <span>best</span> audio gear</h1> 
-           
+
             <p>
             Located at the heart of New York City, Audiophile is the premier store for high end headphones,
             earphones, speakers, and audio accessories. We have a large showroom and luxury demonstration

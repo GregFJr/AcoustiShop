@@ -8,7 +8,7 @@ export default function Nav() {
       <div className="nav-links">
         <a href="/">Home</a>
 
-        <a href="/about">Headphones</a>
+        <a href="/headphones">Headphones</a>
 
         <a href="/products">Speakers</a>
 
