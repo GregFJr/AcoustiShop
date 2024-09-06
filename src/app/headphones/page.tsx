@@ -81,7 +81,7 @@ export default function Headphones() {
             <h6>{product4.new ? 'New Product': ''}</h6>
             <h1>{product4.name}</h1>
             <p>{product4.description}</p>
-            <Link href={`/post/${product4.id}`}>
+            <Link href={`/products/${product4.id}`}>
             <button>see product</button>
             </Link>
             </div>
@@ -94,7 +94,9 @@ export default function Headphones() {
               <h6>{product3.new ? 'New Product' : ''}</h6>
             <h1>{product3.name}</h1>
             <p>{product3.description}</p>
+            <Link href={`/products/${product3.id}`}>
             <button>see product</button>
+            </Link>
             </div>
             <img src={product3.image.desktop} alt={product3.name} />
           </div>
@@ -105,7 +107,9 @@ export default function Headphones() {
             <h6>{product2.new ? 'New Product': ''}</h6>
           <h1>{product2.name}</h1>
           <p>{product2.description}</p>
-          <button>see product</button>
+          <Link href={`/products/${product2.id}`}>
+            <button>see product</button>
+            </Link>
           </div>
           <img src={product2.image.desktop} alt={product2.name} />
           </div>

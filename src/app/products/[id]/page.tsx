@@ -59,10 +59,25 @@ export default function ProductPage() {
 
   return (
     <div>
+      <section className='single-product'>
+      <img src={`/${product.image.desktop}`} alt={product.name} />
+      <div className='single-product-info'>
       <h1>{product.name}</h1>
-      <img src={product.image.desktop} alt={product.name} />
       <p>{product.description}</p>
-      {/* Render more product details as needed */}
+      <h5>$ {product.price}</h5>
+      <div className='add-cart'>
+      <input 
+    type="number" 
+    id="quantity" 
+    name="quantity" 
+    min="1" 
+    max={product.includes[0].quantity} 
+    defaultValue="1"
+  />
+  <button>add to cart</button>
+      </div>
+      </div>
+      </section>
     </div>
   );
 }
