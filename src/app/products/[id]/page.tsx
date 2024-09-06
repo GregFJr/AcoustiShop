@@ -58,13 +58,13 @@ export default function ProductPage() {
   }
 
   return (
-    <div>
+    <div className='product-page-body'>
       <section className='single-product'>
       <img src={`/${product.image.desktop}`} alt={product.name} />
       <div className='single-product-info'>
       <h1>{product.name}</h1>
       <p>{product.description}</p>
-      <h5>$ {product.price}</h5>
+      <h5>$ {product.price.toLocaleString()}</h5>
       <div className='add-cart'>
       <input 
     type="number" 
@@ -77,6 +77,23 @@ export default function ProductPage() {
   <button>add to cart</button>
       </div>
       </div>
+      </section>
+
+      <section className='feature-and-items'>
+        <div className='features'>
+          <h2>features</h2>
+          {product.features.split('\n').map((line, index) => (
+             <p key={index} className="mb-4">{line}</p> ))}
+        </div>
+
+        <div className='included-items'>
+          <h2>In the box</h2>
+          <ul>
+            {product.includes.map((include) => (
+              <li key={include.item}> <span>{include.quantity}x</span> {include.item}</li>
+            ))}
+          </ul>
+        </div>
       </section>
     </div>
   );
