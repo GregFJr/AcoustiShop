@@ -344,6 +344,7 @@ img[alt='right arrow'] {
   justify-content: space-evenly;
   background-color: var(--Just-Black);
   padding: 4% 0 5% 0;
+  height: auto;
 }
 
 .footer .brand {

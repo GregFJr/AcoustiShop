@@ -47,7 +47,8 @@ interface Product {
 const fetcher = (url: string) => fetch(url).then(res => res.json());
 
 export default function Headphones() { 
-  const { data: products, error } = useSWR<Product[]>('/api/post', fetcher);
+  const { data: products, error } = useSWR<Product[]>('/api/post', fetcher, { revalidateOnFocus: true, revalidateOnReconnect: true });
+  
 
   if (error) {
     return <div>Error: Failed to fetch products</div>;
@@ -61,10 +62,6 @@ export default function Headphones() {
   const product2 = products.find((product) => product.id === 2);
   const product3 = products.find((product) => product.id === 3);
   const product4 = products.find((product) => product.id === 4);
-
-
-  const xx99MarkTwo = products.find((product) => product.slug === 'xx99-mark-two-headphones');
-  const xx99MarkOne = products.find((product) => product.slug === 'xx99-mark-one-headphones');
 
 
 
@@ -117,17 +114,17 @@ export default function Headphones() {
 
         <div className='audio-categories'>
           <div>
-          <img src="../../assets/shared/desktop/image-category-thumbnail-headphones.png" alt="thumdnail headphones" />
+          <img src="/assets/shared/desktop/image-category-thumbnail-headphones.png" alt="thumdnail headphones" />
             <h5>Headphones</h5>
             <a href="">Shop</a>
           </div>
           <div>
-          <img src="../../assets/shared/desktop/image-category-thumbnail-speakers.png" alt="thumdnail speakers" />
+          <img src="/assets/shared/desktop/image-category-thumbnail-speakers.png" alt="thumdnail speakers" />
           <h5>Speakers</h5>
           <a href="">Shop</a>
           </div>
           <div>
-          <img src="../../assets/shared/desktop/image-category-thumbnail-earphones.png" alt="thumdnail earphones" />
+          <img src="/assets/shared/desktop/image-category-thumbnail-earphones.png" alt="thumdnail earphones" />
           <h5>Earphones</h5>
           <a href="">Shop</a>
           </div>
