@@ -46,9 +46,8 @@ interface Product {
 
 const fetcher = (url: string) => fetch(url).then(res => res.json());
 
-export default function Headphones() { 
+export default function Earphones() { 
   const { data: products, error } = useSWR<Product[]>('/api/post', fetcher);
-  
 
   if (error) {
     return <div>Error: Failed to fetch products</div>;
@@ -59,11 +58,7 @@ export default function Headphones() {
   }
 
   // Filter specific products by id (example with ids 1, 2, and 3)
-  const product2 = products.find((product) => product.id === 2);
-  const product3 = products.find((product) => product.id === 3);
-  const product4 = products.find((product) => product.id === 4);
-
-
+  const product1 = products.find((product) => product.id === 1);
 
   return (
     <div>
@@ -72,43 +67,17 @@ export default function Headphones() {
       </section>
 
       <section className='products'>
-        {product4 && (
+        {product1 && (
           <div className='p1'>
             <div className='product-descript'>
-            <h6>{product4.new ? 'New Product': ''}</h6>
-            <h1>{product4.name}</h1>
-            <p>{product4.description}</p>
-            <Link href={`/products/${product4.id}`}>
+            <h6>{product1.new ? 'New Product': ''}</h6>
+            <h1>{product1.name}</h1>
+            <p>{product1.description}</p>
+            <Link href={`/products/${product1.id}`}>
             <button>see product</button>
             </Link>
             </div>
-            <img src={product4.image.desktop} alt={product4.name} />
-          </div>
-        )}
-        {product3 && (
-          <div className='p2'>
-            <div className='product-descript'>
-              <h6>{product3.new ? 'New Product' : ''}</h6>
-            <h1>{product3.name}</h1>
-            <p>{product3.description}</p>
-            <Link href={`/products/${product3.id}`}>
-            <button>see product</button>
-            </Link>
-            </div>
-            <img src={product3.image.desktop} alt={product3.name} />
-          </div>
-        )}
-        {product2 && (
-          <div className='p3'>
-          <div className='product-descript'>
-            <h6>{product2.new ? 'New Product': ''}</h6>
-          <h1>{product2.name}</h1>
-          <p>{product2.description}</p>
-          <Link href={`/products/${product2.id}`}>
-            <button>see product</button>
-            </Link>
-          </div>
-          <img src={product2.image.desktop} alt={product2.name} />
+            <img src={product1.image.desktop} alt={product1.name} />
           </div>
         )}
 
@@ -142,7 +111,7 @@ export default function Headphones() {
             audio equipment.
             </p>
           </div>
-          <img src="../../assets/shared/desktop/image-best-gear.jpg" alt="best gear image" />
+          <img src="/assets/shared/desktop/image-best-gear.jpg" alt="best gear image" />
         </div>
 
       </section>

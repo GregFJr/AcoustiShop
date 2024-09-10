@@ -5,7 +5,7 @@ export default function Footer() {
         <footer className="footer">
 
             <div className='brand'>
-                <img src="../../assets/shared/desktop/logo.svg" alt="logo" />
+                <img src="/assets/shared/desktop/logo.svg" alt="logo" />
                 <p>Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers
                    and sound specialists who are devoted to helping you get the most out of personal audio. Come and
                    visit our demo facility - we’re open 7 days a week.</p>
@@ -21,9 +21,9 @@ export default function Footer() {
                 </div>
 
                 <div className='social-links'>
-                <a href="#"><img src="../../assets/shared/desktop/icon-facebook.svg" alt="facebook" /></a>
-                <a href="#"><img src="../../assets/shared/desktop/icon-twitter.svg" alt="twitter" /></a>
-                <a href="#"><img src="../../assets/shared/desktop/icon-instagram.svg" alt="instagram" /></a>
+                <a href="#"><img src="/assets/shared/desktop/icon-facebook.svg" alt="facebook" /></a>
+                <a href="#"><img src="/assets/shared/desktop/icon-twitter.svg" alt="twitter" /></a>
+                <a href="#"><img src="/assets/shared/desktop/icon-instagram.svg" alt="instagram" /></a>
                 </div>
             </div>
 

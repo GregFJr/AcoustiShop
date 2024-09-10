@@ -10,9 +10,9 @@ export default function Nav() {
 
         <a href="/headphones">Headphones</a>
 
-        <a href="">Speakers</a>
+        <a href="/speakers">Speakers</a>
 
-        <a href="">Earphones</a>
+        <a href="/earphones">Earphones</a>
       </div>
 
      <div><img src="/assets/shared/desktop/icon-cart.svg" alt="cart icon" /></div> 
