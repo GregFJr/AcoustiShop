@@ -21,6 +21,253 @@ body {
 body p {
   color: var(--Text-Grey)
 }
+/*------------------Home--------------------------*/
+
+.product-hero {
+  display: flex;
+  align-items: center;
+  background-image: url('/assets/home/desktop/image-hero.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 61em;
+}
+
+.product-hero h1 {
+  font-size: 56px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 56px;
+  color: var(--Just-White);
+}
+
+.product-hero button {
+  background-color: var(--Burnt-Orange);
+  color: var(--Just-White);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  padding: 2%;
+}
+
+.product-hero div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 15%;
+  inline-size: 800px;
+}
+
+.product-hero h6 {
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: var(--Text-Grey);
+}
+
+.home-catergories {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+}
+
+.home-catergories .audio-categories {
+  display: flex;
+  gap: 70px;
+  width: 100%;
+}
+
+.home-catergories .audio-categories div {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.main-ad {
+  display: flex;
+  justify-content: flex-end;
+  background-image: url('/assets/home/desktop/image-speaker-zx9.png'), url('/assets/home/desktop/pattern-circles.svg');
+  background-color: var(--Burnt-Orange);
+  background-position: 4cm;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 40em;
+  border-radius: 5px;
+  padding-right: 10em;
+}
+
+.main-ad2 {
+  align-content: center;
+  gap: 20px;
+  background-image: url('/assets/home/desktop/image-speaker-zx7.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 2%;
+  height: 25em;
+  border-radius: 5px;
+  padding-left: 2em;
+}
+
+.main-ad .ma1 {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  inline-size: 500px;
+  gap: 40px;
+}
+
+.ma1 h1 {
+  font-size: 58px;
+  color: var(--Just-White);
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.ma2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.ma2 h1 {
+  font-size: 48px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.ma2 button {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 2px solid black;
+  padding: 15px 30px 15px 30px;
+  font-weight: 500;
+}
+
+.ma3 {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  margin-top: 2%;
+  margin-bottom: 20%;
+
+
+}
+
+.ma3-img {
+height: auto;
+border-radius: 10px;
+width: 100%;
+}
+
+.ma3-img img {
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.ma3-descript h1 {
+  font-size: 48px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.ma3-descript button {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 2px solid black;
+  padding: 15px 30px 15px 30px;
+  font-weight: 500;
+}
+
+.ma3-descript {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  height: auto;
+  width: 100%;
+  border-radius: 10px;
+  background-color: var(--Greyish);
+}
+
+.ma3-descript button {
+  position: relative;
+  left: 100px;
+}
+
+.ma3 h1 {
+  position: relative;
+  left: 100px;
+}
+
+.ma1 p {
+  color: var(--Off-White);
+  font-size: 20px;
+  font-weight: lighter;
+  word-spacing: 2px;
+}
+
+.main-ad img {
+height: auto;
+width: 100%;
+padding-left: 15%;
+padding-top: 23%;
+}
+
+.main-ad button {
+  background-color: var(--Just-Black);
+  color: var(--Just-White);
+  letter-spacing: 1px;
+  padding: 15px 30px 15px 30px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.home-main {
+  padding: 0 15% 0 15%;
+}
+
+.home-audio-script{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  inline-size: 700px;
+}
+
+.home-audio-script h1 {
+  font-size: 58px;
+  inline-size: 600px;
+  text-transform: uppercase;
+  line-height: 60px;
+  font-weight: bold;
+}
+
+.home-audio-script span {
+  color: var(--Burnt-Orange);
+}
+
+.home-audio-script p {
+  font-size: 20px;
+}
+
+.home-headphone-page-script {
+display: flex;
+justify-content: space-between;
+margin-bottom: 15%;
+}
+
+.home-headphone-page-script img {
+  border-radius: 10px;
+}
+
+
+
+
 
 /*-----------------Navigation--------------------*/
 .navigation {

@@ -47,7 +47,10 @@ interface Product {
 const fetcher = (url: string) => fetch(url).then(res => res.json());
 
 export default function Headphones() { 
-  const { data: products, error } = useSWR<Product[]>('/api/post', fetcher);
+  const { data: products, error } = useSWR<Product[]>('/api/post', fetcher,  {
+    revalidateOnFocus: false, 
+    dedupingInterval: 10000, 
+  });
   
 
   if (error) {
