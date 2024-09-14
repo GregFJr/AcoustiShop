@@ -2,6 +2,7 @@
 
 import { useParams } from 'next/navigation';
 import useSWR from 'swr';
+import Link from 'next/link';
 
 // Define TypeScript interfaces for your product data
 interface ImageSet {
@@ -48,7 +49,7 @@ const fetcher = (url: string) => fetch(url).then(res => res.json());
 export default function ProductPage() {
   const { id } = useParams();
   const { data: product, error } = useSWR<Product>(id ? `/api/post/${id}` : null, fetcher);
-
+  
   if (error) {
     return <div>Error: Failed to fetch product</div>;
   }
@@ -95,6 +96,50 @@ export default function ProductPage() {
           </ul>
         </div>
       </section>
+
+      <section className='product-gallery'>
+        <div className='gallery-images'>
+          <div className='image-set-1'>
+          <img src={`/${product.gallery.first.desktop}`} alt={product.name} />
+          <img src={`/${product.gallery.second.desktop}`} alt={product.name} />
+          </div>
+          <div className='image-set-2'>
+          <img src={`/${product.gallery.third.desktop}`} alt={product.name} />
+          </div>
+        </div>
+      </section>
+
+      <section className='also-like'>
+        {product.others.map((otherProduct) => (
+          <div key={otherProduct.slug} className='other-product'>
+            <img src={`/${otherProduct.image.desktop}`} alt={otherProduct.name} />
+            <h3>{otherProduct.name}</h3>
+            <Link href={`/products/${otherProduct.slug}`}>
+              <button>See product</button>
+            </Link>
+          </div>
+        ))}
+      </section>
+      
+      <div className='audio-categories'>
+          <div>
+          <img src="/assets/shared/desktop/image-category-thumbnail-headphones.png" alt="thumdnail headphones" />
+            <h5>Headphones</h5>
+            <a href="">Shop</a>
+          </div>
+          <div>
+          <img src="/assets/shared/desktop/image-category-thumbnail-speakers.png" alt="thumdnail speakers" />
+          <h5>Speakers</h5>
+          <a href="">Shop</a>
+          </div>
+          <div>
+          <img src="/assets/shared/desktop/image-category-thumbnail-earphones.png" alt="thumdnail earphones" />
+          <h5>Earphones</h5>
+          <a href="">Shop</a>
+          </div>
+        </div>
+
+
     </div>
   );
 }
