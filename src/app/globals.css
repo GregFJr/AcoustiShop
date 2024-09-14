@@ -515,6 +515,7 @@ color: var(--Burnt-Orange);
 .single-product img {
   width: 500px;
   height: auto;
+  border-radius: 10px;
 }
 
 .single-product-info {
