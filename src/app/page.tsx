@@ -54,7 +54,11 @@ export default function Home() {
     }
   
     if (!products) {
-      return <div>Loading...</div>;
+      return <div className='bouncing-loader'>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>;
     }
 
     const heroProduct = products.find((product) => product.id === 4);
