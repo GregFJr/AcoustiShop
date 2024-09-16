@@ -54,7 +54,11 @@ export default function Earphones() {
   }
 
   if (!products) {
-    return <div>Loading...</div>;
+    return <div className='bouncing-loader'>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>;
   }
 
   // Filter specific products by id (example with ids 1, 2, and 3)

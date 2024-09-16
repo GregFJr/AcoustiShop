@@ -55,7 +55,11 @@ export default function ProductPage() {
   }
 
   if (!product) {
-    return <div>Loading...</div>;
+    return <div className='bouncing-loader'>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>;
   }
 
   return (
