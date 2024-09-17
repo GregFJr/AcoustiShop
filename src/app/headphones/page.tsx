@@ -88,8 +88,12 @@ export default function Headphones() {
             <Link href={`/products/${product4.id}`}>
             <button>see product</button>
             </Link>
-            </div>
-            <img src={product4.image.desktop} alt={product4.name} />
+          </div>
+            <picture>
+            {/* <source media="(max-width: 768px)" srcSet={product4.image.mobile} />  */}
+            <source media="(max-width: 1024px)" srcSet={product4.image.tablet} /> {/* Image for tablet */}
+            <img src={product4.image.desktop} alt={product4.name} />  {/* Fallback image */}
+            </picture>
           </div>
         )}
         {product3 && (
