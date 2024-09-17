@@ -73,7 +73,7 @@ export default function Headphones() {
 
 
   return (
-    <div>
+    <div className='headphones-body'>
       <section className='headphones-hero'>
         <h1>Headphones</h1>
       </section>
@@ -153,7 +153,7 @@ export default function Headphones() {
             audio equipment.
             </p>
           </div>
-          <img src="../../assets/shared/desktop/image-best-gear.jpg" alt="best gear image" />
+          <img src="/assets/shared/desktop/image-best-gear.jpg" alt="best gear image" />
         </div>
 
       </section>
