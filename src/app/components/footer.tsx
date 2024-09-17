@@ -14,10 +14,10 @@ export default function Footer() {
 
             <div className="social-media">
                 <div className='footer-links'>
-                    <a href="">home</a>
-                    <a href="">headphones</a>
-                    <a href="">speakers</a>
-                    <a href="">earphones</a>
+                    <a href="/">home</a>
+                    <a href="/headphones">headphones</a>
+                    <a href="/speakers">speakers</a>
+                    <a href="/earphones">earphones</a>
                 </div>
 
                 <div className='social-links'>
