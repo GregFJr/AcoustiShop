@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
-import Nav from "./components/nav";
 import CartManager from "./components/cartManager";
 import Footer from "./components/footer";
 import "./globals.css";
 
-const manrope = Manrope({ 
-  subsets: ['latin'],
-  weight: ['200','300','400','500','600', '700', '800'], // Add weights you need
-  variable: '--font-manrope', // Optional: Define a custom CSS variable
- });
+const manrope = Manrope({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"], // Add weights you need
+  variable: "--font-manrope", // Optional: Define a custom CSS variable
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,12 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-       
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body className={manrope.className}>
-        <CartManager>
-        {children}
-        </CartManager>
+        <CartManager>{children}</CartManager>
         <Footer />
       </body>
     </html>
