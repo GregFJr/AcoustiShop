@@ -594,6 +594,41 @@ body {
   display: none;
 }
 
+.footer {
+  flex-direction: column-reverse;
+}
+
+.footer .brand img {
+  display: none;
+}
+
+.brand {
+  max-width: 100%;
+  text-align: center;
+}
+
+.footer .social-media {
+  align-items: center ;
+  justify-content: center;
+  gap: 40px;
+}
+
+.footer .social-media img {
+  display: block;
+}
+
+.social-media .footer-links {
+  flex-direction: column;
+  text-align: center;
+  gap: 30px;
+}
+
+.social-links {
+
+}
+
+
+
 }
 
 /*------------product-page---------------*/
@@ -805,6 +840,9 @@ text-transform: uppercase;
   background-color: var(--Just-Black);
   padding: 4% 0 5% 0;
   height: auto;
+}
+
+.social-media img {
   display: none;
 }
 

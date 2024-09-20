@@ -9,10 +9,11 @@ export default function Footer() {
                 <p>Audiophile is an all in one stop to fulfill your audio needs. We&rsquo;re a small team of music lovers
                    and sound specialists who are devoted to helping you get the most out of personal audio. Come and
                    visit our demo facility - We&rsquo;re open 7 days a week.</p>
-                <p>&copy; 2022 Audiophile. All rights reserved.</p>
+                <p>&copy; 2024 Audiophile. All Rights Reserved.</p>
             </div>
 
             <div className="social-media">
+<img src="/assets/shared/desktop/logo.svg" alt="logo" />
                 <div className='footer-links'>
                     <a href="/">home</a>
                     <a href="/headphones">headphones</a>
