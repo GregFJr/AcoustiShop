@@ -90,7 +90,7 @@ export default function Headphones() {
             </Link>
           </div>
             <picture>
-            {/* <source media="(max-width: 768px)" srcSet={product4.image.mobile} />  */}
+            <source media="(max-width: 844px)" srcSet={product4.image.mobile} /> 
             <source media="(max-width: 1024px)" srcSet={product4.image.tablet} /> {/* Image for tablet */}
             <img src={product4.image.desktop} alt={product4.name} />  {/* Fallback image */}
             </picture>
@@ -106,7 +106,11 @@ export default function Headphones() {
             <button>see product</button>
             </Link>
             </div>
-            <img src={product3.image.desktop} alt={product3.name} />
+            <picture>
+            <source media="(max-width: 844px)" srcSet={product3.image.mobile} /> 
+            <source media="(max-width: 1024px)" srcSet={product3.image.tablet} /> {/* Image for tablet */}
+            <img src={product3.image.desktop} alt={product3.name} />  {/* Fallback image */}
+            </picture>
           </div>
         )}
         {product2 && (
@@ -118,8 +122,12 @@ export default function Headphones() {
           <Link href={`/products/${product2.id}`}>
             <button>see product</button>
             </Link>
-          </div>
-          <img src={product2.image.desktop} alt={product2.name} />
+            </div>
+            <picture>
+            <source media="(max-width: 844px)" srcSet={product2.image.mobile} /> 
+            <source media="(max-width: 1044px)" srcSet={product2.image.tablet} /> {/* Image for tablet */}
+            <img src={product2.image.desktop} alt={product2.name} />  {/* Fallback image */}
+            </picture>
           </div>
         )}
 
