@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import Nav from "./components/nav";
+import CartManager from "./components/cartManager";
 import Footer from "./components/footer";
 import "./globals.css";
 
@@ -26,8 +27,9 @@ export default function RootLayout({
        
       </head>
       <body className={manrope.className}>
-        <Nav />
+        <CartManager>
         {children}
+        </CartManager>
         <Footer />
       </body>
     </html>

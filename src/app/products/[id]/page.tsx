@@ -3,6 +3,7 @@
 import { useParams } from 'next/navigation';
 import useSWR from 'swr';
 import Link from 'next/link';
+import { useCart } from '../../hooks/useCart';
 
 // Define TypeScript interfaces for your product data
 interface ImageSet {
@@ -49,6 +50,7 @@ const fetcher = (url: string) => fetch(url).then(res => res.json());
 export default function ProductPage() {
   const { id } = useParams();
   const { data: product, error } = useSWR<Product>(id ? `/api/post/${id}` : null, fetcher);
+  const { addToCart } = useCart();
   
   if (error) {
     return <div>Error: Failed to fetch product</div>;
@@ -61,6 +63,16 @@ export default function ProductPage() {
       <div></div>
     </div>;
   }
+
+  const handleAddToCart = () => {
+    addToCart({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      image: product.image,
+      quantity: 1, // Add default quantity, can be customized later
+    });
+  };
 
   return (
     <div className='product-page-body'>
@@ -79,7 +91,7 @@ export default function ProductPage() {
     max={product.includes[0].quantity} 
     defaultValue="1"
   />
-  <button>add to cart</button>
+  <button onClick={handleAddToCart}>add to cart</button>
       </div>
       </div>
       </section>
