@@ -79,6 +79,7 @@ export default function ProductPage() {
       <section className='single-product'>
       <img src={`/${product.image.desktop}`} alt={product.name} />
       <div className='single-product-info'>
+      <h6>{product.new ? 'New Product': ''}</h6>
       <h1>{product.name}</h1>
       <p>{product.description}</p>
       <h5>$ {product.price.toLocaleString()}</h5>
@@ -125,7 +126,8 @@ export default function ProductPage() {
         </div>
       </section>
 
-      <section className='also-like'>
+    <label htmlFor="also"><h1>You May Also Like</h1></label>
+      <section className='also-like' data-name='also'>
         {product.others.map((otherProduct) => (
           <div key={otherProduct.slug} className='other-product'>
             <img src={`/${otherProduct.image.desktop}`} alt={otherProduct.name} />
@@ -135,23 +137,24 @@ export default function ProductPage() {
             </Link>
           </div>
         ))}
+
       </section>
       
       <div className='audio-categories'>
           <div>
           <img src="/assets/shared/desktop/image-category-thumbnail-headphones.png" alt="thumdnail headphones" />
             <h5>Headphones</h5>
-            <a href="">Shop</a>
+            <a href="/headphones">Shop</a>
           </div>
           <div>
           <img src="/assets/shared/desktop/image-category-thumbnail-speakers.png" alt="thumdnail speakers" />
           <h5>Speakers</h5>
-          <a href="">Shop</a>
+          <a href="/speakers">Shop</a>
           </div>
           <div>
           <img src="/assets/shared/desktop/image-category-thumbnail-earphones.png" alt="thumdnail earphones" />
           <h5>Earphones</h5>
-          <a href="">Shop</a>
+          <a href="/earphones">Shop</a>
           </div>
         </div>
 

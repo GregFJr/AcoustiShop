@@ -111,6 +111,7 @@ export default function Home() {
         </div>
       </section>
 
+<section className='all-ads'>
       <section className='audio-ad-sect'>
         <section className='main-ad'>
           {productAd1 && (
@@ -154,6 +155,7 @@ export default function Home() {
             </div>
           )}
         </section>
+      </section>
       </section>
 
       <div className='home-headphone-page-script'>
