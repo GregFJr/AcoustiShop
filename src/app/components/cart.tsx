@@ -1,4 +1,4 @@
-"use client";
+import Link from 'next/link';
 
 interface CartModalProps {
   cart: any; // Define the type of your cart, or use `any` for now
@@ -33,10 +33,10 @@ export default function CartModal({
         <ul>
           {cart.map((item: any) => (
             <li key={item.id}>
-             <div className="item-info"> 
-                  <div>{item.name}</div>  
-                  <div>${item.price.toLocaleString()}</div> 
-                </div>
+              <div className="item-info"> 
+                <div>{item.name}</div>  
+                <div>${item.price.toLocaleString()}</div> 
+              </div>
               <span>
                 <input
                   type="number"
@@ -53,7 +53,15 @@ export default function CartModal({
           ))}
         </ul>
       )}
-    </div>
 
+      {/* Add the checkout button using Link */}
+      <div className="checkout">
+        <Link href="/checkout">
+          <button disabled={cart.length === 0}>
+            Proceed to Checkout
+          </button>
+        </Link>
+      </div>
+    </div>
   );
 }

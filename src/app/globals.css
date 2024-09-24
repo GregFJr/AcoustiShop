@@ -1148,3 +1148,31 @@ text-transform: uppercase;
     width: 100px;
 
   }
+
+  /*-----------------Checkout page------------*/
+  .checkout-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    width: 40%;
+  }
+
+  .checkout-form label {
+    display: block;
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  .checkout-form form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--Greyish);
+    width: 100%;
+  }
+
+  .billing-details div {
+    display: flex;
+    gap: 30px;
+
+  }
