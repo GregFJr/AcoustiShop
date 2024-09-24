@@ -1150,18 +1150,42 @@ text-transform: uppercase;
   }
 
   /*-----------------Checkout page------------*/
+  .checkout-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    height: 100dvh;
+    background-color: var(--Greyish);
+
+  }
+
+  .checkout-form {
+    background-color: var(--Just-White);
+    margin: 20px 0 20px 0;
+    border-radius: 10px;
+    padding: 30px;
+    height: auto;
+  }
+
   .checkout-form form{
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 30px;
-    width: 40%;
+    gap: 30px;
+    padding-top: 10px;
+    width: 100%;
   }
 
   .checkout-form label {
     display: block;
     font-weight: bold;
     font-size: 12px;
+  }
+
+  .checkout-form h1 {
+    font-weight: bold;
+    font-size: 20px;
+
+    text-transform: uppercase;
   }
 
   .checkout-form form input {
@@ -1171,8 +1195,20 @@ text-transform: uppercase;
     width: 100%;
   }
 
+  .billing-details {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .checkout-form h5 {
+    color: var(--Burnt-Orange);
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
   .billing-details div {
     display: flex;
     gap: 30px;
-
   }

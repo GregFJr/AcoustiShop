@@ -11,6 +11,7 @@ export default function CheckoutPage() {
         <h1>Checkout</h1>
         <form>
           <div className="billing-details">
+            <h5>Billing Details</h5>
             <div>
               <label htmlFor="name">
                 Name
