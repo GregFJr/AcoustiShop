@@ -25,29 +25,56 @@ export default function CheckoutPage() {
 
             <label htmlFor="phone-number">
               Phone Number
-              <input
-                type="text"
-                placeholder="Phone Number"
-                data-name="phone-number"
-              />
+              <input type="text" placeholder="Phone Number" data-name="phone-number"/>
             </label>
           </div>
+    {/*------------------------------Shipping-----------------------------------------------------------*/}
+          <div className="shipping-info">
+            <h5>Shipping info</h5>
+            <label htmlFor="adress">Address
+                <input type="text" placeholder="Address" data-name="address" />
+            </label>
 
-          <label htmlFor="address">Address</label>
-          <input type="text" placeholder="Address" data-name="address" />
-          {/* Payment method selection */}
-          <select>
-            <option value="credit">Credit Card</option>
-            <option value="debit">Debit Card</option>
-            <option value="paypal">PayPal</option>
-          </select>
-          {/* Submit button */}
-          <button type="submit">Submit Order</button>
+                <div>
+                    <label htmlFor="zip">Zip
+                        <input type="text" placeholder="100001" data-name="zip" />
+                    </label>
+
+                    <label htmlFor="city">City
+                        <input type="text" placeholder="New York" data-name="city" />
+                    </label>
+                </div>
+
+                <label htmlFor="country">Country
+                    <input type="text" placeholder="United States" data-name="country" />
+                </label>
+          </div>
+{/*------------------------------Payment-----------------------------------------------------------*/}
+          <div className="payment-details">
+            <h5>Payment Details</h5>
+            <div className="checkboxes">
+                <input type="checkbox" data-name="e-money" />
+                <input type="checkbox" data-name="Cash on Delivery" />
+            </div>
+          </div>
+
+        <div className="e-money-container">
+          <label htmlFor="e-money number">
+            E-Money Number
+            <input type="text" placeholder="1234567890" data-name="e-money-number" />
+          </label>
+
+          <label htmlFor="e-money pin">
+            E-Money Pin
+            <input type="text" placeholder="1234" data-name="e-money-pin" />
+          </label>
+        </div>
+
         </form>
       </section>
 
       <div className="cart-summary">
-        <h2>Your Cart</h2>
+        <h6>Summary</h6>
         {cart.length === 0 ? (
           <p>Your cart is empty.</p>
         ) : (
@@ -58,26 +85,75 @@ export default function CheckoutPage() {
               ) => (
                 <li key={item.id}>
                   <span>
-                    {item.name} x {item.quantity}
+                   <div>{item.name}</div> <div> ${(item.price * item.quantity).toFixed(2)}</div>
                   </span>
-                  <span>${(item.price * item.quantity).toFixed(2)}</span>
+                  <span>x{item.quantity}</span>
                 </li>
               )
             )}
           </ul>
         )}
-        <div className="total">
-          <h3>
-            Total: $
-            {cart
-              .reduce(
-                (total: number, item: { price: number; quantity: number }) =>
-                  total + item.price * item.quantity,
-                0
-              )
-              .toFixed(2)}
-          </h3>
-        </div>
+<div className="total">
+  
+    <div>
+   <h3> Total </h3>
+    ${new Intl.NumberFormat('en-US', { 
+      minimumFractionDigits: 2, 
+      maximumFractionDigits: 2 
+    }).format(
+      cart.reduce(
+        (total: number, item: { price: number; quantity: number }) =>
+          total + item.price * item.quantity,
+        0
+      )
+    )}
+    </div>
+  
+  
+  <div>
+   <h3> Shipping</h3>
+    ${cart.reduce((total: number, item: { quantity: number }) => total + item.quantity, 0) > 4 ? 'Free' : '50.00'}
+  </div>
+
+  
+<div>
+   <h3>VAT included</h3>
+    ${new Intl.NumberFormat('en-US', { 
+      minimumFractionDigits: 2, 
+      maximumFractionDigits: 2 
+    }).format(
+      cart.reduce(
+        (total: number, item: { price: number; quantity: number }) =>
+          total + item.price * item.quantity,
+        0
+      ) * 0.08
+    )}
+ </div>
+  
+  
+<div>
+   <h3> Grand total</h3>
+   <span> ${new Intl.NumberFormat('en-US', { 
+      minimumFractionDigits: 2, 
+      maximumFractionDigits: 2 
+    }).format(
+      cart.reduce(
+        (total: number, item: { price: number; quantity: number }) =>
+          total + item.price * item.quantity,
+        0
+      ) +
+      (cart.reduce((total: number, item: { quantity: number }) => total + item.quantity, 0) > 4 ? 0 : 50) +
+      (cart.reduce(
+        (total: number, item: { price: number; quantity: number }) =>
+          total + item.price * item.quantity,
+        0
+      ) * 0.08)
+    )}</span>
+    </div>
+  
+</div>
+
+    <button type="submit">Continue & Pay</button>
       </div>
     </div>
   );
