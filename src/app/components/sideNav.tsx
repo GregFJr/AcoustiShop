@@ -19,7 +19,7 @@ export default function SideNav({ isOpen, toggleSideNav  }: SideNavProps  ) {
               alt="thumdnail headphones"
             />
             <h5>Headphones</h5>
-            <a href="">Shop</a>
+            <a href="/headphones">Shop</a>
           </div>
           <div>
             <img
@@ -27,7 +27,7 @@ export default function SideNav({ isOpen, toggleSideNav  }: SideNavProps  ) {
               alt="thumdnail speakers"
             />
             <h5>Speakers</h5>
-            <a href="">Shop</a>
+            <a href="/speakers">Shop</a>
           </div>
           <div>
             <img
@@ -35,7 +35,7 @@ export default function SideNav({ isOpen, toggleSideNav  }: SideNavProps  ) {
               alt="thumdnail earphones"
             />
             <h5>Earphones</h5>
-            <a href="">Shop</a>
+            <a href="/earphones">Shop</a>
           </div>
         </div>
       </section>
