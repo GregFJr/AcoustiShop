@@ -9,7 +9,12 @@ export default function Nav({ onCartClick }: NavProps) {
 
   return (
     <nav className="navigation">
-      <div><img src="/assets/shared/desktop/logo.svg" alt="logo" /></div>
+      <div className="logo"><img src="/assets/shared/desktop/logo.svg" alt="logo" /></div>
+      <div className="hamburger-menu">
+        <div className="line"></div>
+        <div className="line"></div>
+        <div className="line"></div>
+      </div>
 
       <div className="nav-links">
         <a href="/">Home</a>

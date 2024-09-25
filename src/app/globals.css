@@ -444,6 +444,36 @@ padding-top: 25px;
   color: var(--Burnt-Orange);
 }
 
+.hamburger-menu {
+  display: none;
+}
+
+@media screen and (max-width: 844px) {
+.hamburger-menu {
+  display: block;
+}
+
+.hamburger-menu .line {
+  background-color: var(--Just-White);
+  height: 2px;
+  width: 25px;
+  margin-bottom: 5px;
+ }
+
+ .navigation {
+  justify-content: space-between;
+  padding: 10px 20px;
+ }
+
+ .navigation .logo {
+  display: none;
+ }
+
+ .navigation .logo img {
+   display: none;
+ }
+}
+
 /*----------------Heaphones Page-----------------*/
 
 .headphones-hero {
