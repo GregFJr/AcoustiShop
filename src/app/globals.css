@@ -1293,4 +1293,18 @@ text-transform: uppercase;
   .total div span {
     color: var(--Burnt-Orange);
   }
+
+  @media screen and (max-width: 1044px){
+    .checkout-container {
+       flex-direction: column;
+       gap: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 844px){
+    .checkout-container {
+       flex-direction: column;
+       gap: 10px;
+    }
+  }
   
