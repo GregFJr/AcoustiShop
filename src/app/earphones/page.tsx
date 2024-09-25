@@ -67,7 +67,7 @@ export default function Earphones() {
   return (
     <div>
       <section className='headphones-hero'>
-        <h1>Headphones</h1>
+        <h1>earphones</h1>
       </section>
 
       <section className='products'>

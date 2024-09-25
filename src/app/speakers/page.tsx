@@ -69,7 +69,7 @@ export default function Speakers() {
   return (
     <div>
       <section className='headphones-hero'>
-        <h1>Headphones</h1>
+        <h1>speakers</h1>
       </section>
 
       <section className='products'>
