@@ -9,7 +9,10 @@ export default function SideNav({ isOpen, toggleSideNav  }: SideNavProps  ) {
 
     return (
         <div className={`${isOpen ? 'open' : ''} side-nav`}>
-            <button onClick={toggleSideNav}> close </button>
+            <div className="side-nav-btn">
+            <button onClick={toggleSideNav}>&#10005;</button>
+            <button><a href="/">&#8962;</a></button>
+        </div>
             <ul>
             <section className="home-catergories">
         <div className="audio-categories nav-categories">

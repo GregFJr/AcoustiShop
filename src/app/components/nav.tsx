@@ -15,8 +15,8 @@ export default function Nav({ onCartClick }: NavProps) {
 
   return (
     <nav className="navigation">
-      <div className="logo"><img src="/assets/shared/desktop/logo.svg" alt="logo" /></div>
-      
+      <div className="logo"><a href="/"><img src="/assets/shared/desktop/logo.svg" alt="logo" /></a></div>
+
       <div className="hamburger-menu " onClick={toggleSideNav}>
       &#9776;
       </div>

@@ -473,6 +473,11 @@ padding-top: 25px;
  box-shadow: 0px 0px 0px 1000dvh rgba(0, 0, 0, 0.557);
 }
 
+.side-nav-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media screen and (max-width: 844px) {
 .hamburger-menu {
   display: block;
@@ -1196,6 +1201,7 @@ text-transform: uppercase;
   .cart-head {
     display: flex;
     justify-content: space-between;
+    z-index: 2;
     width: 100%;
   }
 
