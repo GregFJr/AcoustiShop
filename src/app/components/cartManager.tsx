@@ -22,6 +22,7 @@ export default function CartManager({ children }: { children: React.ReactNode })
         removeFromCart={removeFromCart}
         isVisible={isCartVisible}
         onClose={toggleCart}
+        clearCart={useCart().clearCart} // Clear cart using useCart hook
       />
       {children}
     </>

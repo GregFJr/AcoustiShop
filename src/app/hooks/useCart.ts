@@ -26,9 +26,15 @@ export const useCart = () => {
     mutate(updatedCart, false); // Update cart without re-fetching
   };
 
+  const clearCart = () => {
+    localStorage.removeItem('cart');
+    mutate([], false); // Clear all items from the cart
+  };
+
   return {
     cart,
     addToCart,
     removeFromCart,
+    clearCart,
   };
 };

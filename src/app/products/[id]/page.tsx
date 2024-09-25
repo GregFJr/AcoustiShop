@@ -76,6 +76,7 @@ export default function ProductPage() {
 
   return (
     <div className='product-page-body'>
+      <div className='product-container'>
       <section className='single-product'>
       <img src={`/${product.image.desktop}`} alt={product.name} />
       <div className='single-product-info'>
@@ -158,7 +159,7 @@ export default function ProductPage() {
           </div>
         </div>
 
-
+        </div>
     </div>
   );
 }
